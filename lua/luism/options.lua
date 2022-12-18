@@ -1,7 +1,8 @@
 vim.opt.number = true
-vim.opt.numberwidth = 2
+vim.opt.numberwidth = 4
 vim.opt.termguicolors = true
 vim.opt.cursorline = true
+vim.opt.relativenumber = true
 
 -- Vimspector options
 vim.cmd([[

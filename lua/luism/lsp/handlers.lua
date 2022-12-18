@@ -24,14 +24,21 @@ M.setup = function()
 	    spacing = 4,
 	    prefix = "",
 	    source = false,
-	    format = format
+	    format = format,
+	    severity = {
+		min = vim.diagnostic.severity.WARN
+	    }
     },
     -- show signs
     signs = {
       active = signs,
     },
     update_in_insert = true,
-    underline = true,
+    underline = {
+	    severity = {
+		min = vim.diagnostic.severity.WARN
+	    }
+    },
     severity_sort = true,
     float = {
       focusable = false,

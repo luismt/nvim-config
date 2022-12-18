@@ -34,6 +34,11 @@ for _, server in pairs(servers) do
 	opts = {
 		on_attach = require("luism.lsp.handlers").on_attach,
 		capabilities = require("luism.lsp.handlers").capabilities,
+		settings = {
+			Lua = {
+				diagnostics = { globals = {'vim'} }
+			}
+		}
 	}
 
 	server = vim.split(server, "@")[1]
@@ -45,3 +50,4 @@ for _, server in pairs(servers) do
 
 	lspconfig[server].setup(opts)
 end
+
