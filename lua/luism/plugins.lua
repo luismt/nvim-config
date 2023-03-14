@@ -43,7 +43,13 @@ Plug 'puremourning/vimspector'
 -- Treesitter
 Plug ('nvim-treesitter/nvim-treesitter', {['do']=':TSUpdate'})
 
+-- Vue
+Plug ('neoclide/coc.nvim', {['branch']='release'})
+Plug ('yaegassy/coc-volar', {['do']='yarn install --frozen-lockfile && yarn run build'})
+Plug ('yaegassy/coc-volar-tools', {['do']='yarn install --frozen-lockfile && yarn run build'})
 
+-- Tailwindcss
+Plug ('yaegassy/coc-tailwindcss3', {['do']='yarn install --frozen-lockfile && yarn run build'})
 vim.call('plug#end')
 
 require('nvim-autopairs').setup {}
